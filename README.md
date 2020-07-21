@@ -19,3 +19,7 @@ Email: priyaldanani@gmail.com
 Meetali Dulera (VESIT)  
 Phone: 7021679539  
 Email: meetali.dulera23@gmail.com
+
+Shruti Agrawal (SIT)
+Phone: 9473530394
+Email: agrawalshruti909@gmail.com
