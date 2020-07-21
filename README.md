@@ -11,3 +11,7 @@ Email: rushabhkhara70@gmail.com
 Aman Kumar (TIET)                                                                                                                                                              
 Phone: 9458513227                                                                                                                                                                
 Email: aman.kumar.arcanion.11@gmail.com
+
+Priyal Danani(VESIT)
+Phone: 9869978082
+Email: priyaldanani@gmail.com
