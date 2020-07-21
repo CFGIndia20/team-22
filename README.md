@@ -15,3 +15,7 @@ Email: aman.kumar.arcanion.11@gmail.com
 Priyal Danani(VESIT)
 Phone: 9869978082
 Email: priyaldanani@gmail.com
+
+Meetali Dulera (VESIT)
+Phone: 7021679539
+Email: meetali.dulera23@gmail.com
