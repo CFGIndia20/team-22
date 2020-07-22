@@ -23,3 +23,7 @@ Email: meetali.dulera23@gmail.com
 Shruti Agrawal (SIT)<br/>
 Phone: 9473530394<br/>
 Email: agrawalshruti909@gmail.com
+
+Kaustubh Kekre (DJSCE)
+Phone: 9699447379
+Email: kkekre90@gmail.com
