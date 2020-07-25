@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Umeed</string>
+    <string name="splash_screen">made with UMEED</string>
+    <string name="forgot_password">Forgot Password?</string>
+</resources>
