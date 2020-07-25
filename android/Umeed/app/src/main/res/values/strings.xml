@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">Umeed</string>
-    <string name="splash_screen">made with UMEED</string>
+    <string name="splash_screen">Made with Ummed for Women</string>
     <string name="forgot_password">Forgot Password?</string>
+    <string name="login_text">Welcome to UMEED</string>
+    <string name="login_btn">Login</string>
+    <string name="phone_number">Enter phone number</string>
+    <string name="password">Enter password</string>
 </resources>
