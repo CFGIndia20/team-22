@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
+        android:title="Tasks"
+        android:id="@+id/assignedTask"
+        android:icon="@drawable/ic_assigned_task"/>
+    <item
         android:title="Add User"
         android:id="@+id/addUser"
         android:icon="@drawable/ic_add_user"/>
+    <item
+        android:title="Profile"
+        android:id="@+id/profile"
+        android:icon="@drawable/ic_profile"/>
 
 </menu>

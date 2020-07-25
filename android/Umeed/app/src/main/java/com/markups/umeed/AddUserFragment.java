@@ -26,35 +26,35 @@ public class AddUserFragment extends Fragment {
         View v= inflater.inflate(R.layout.fragment_add_user, container, false);
         addUser_bt_signIn=v.findViewById(R.id.addUser_bt_signIn);
         addUser_pg_signIn=v.findViewById(R.id.addUser_pg_signIn);
-        addUser_bt_signIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                addUser_pg_signIn.setVisibility(View.VISIBLE);
-                addUser_bt_signIn.setVisibility(View.GONE);
-                Call<LogInReturn>logInReturnCall=LogInActivity.retrofitInterface.addUser(new AddUserRequest());
-                logInReturnCall.enqueue(new Callback<LogInReturn>() {
-                    @Override
-                    public void onResponse(Call<LogInReturn> call, Response<LogInReturn> response) {
-                        if(response.body()==null)
-                        {
-                            Toast.makeText(getActivity(),"Something Went Wrong",Toast.LENGTH_LONG).show();
-                            addUser_pg_signIn.setVisibility(View.GONE);
-                            addUser_bt_signIn.setVisibility(View.VISIBLE);
-                        }
-                        else{
-
-                        }
-                    }
-
-                    @Override
-                    public void onFailure(Call<LogInReturn> call, Throwable t) {
-                        Toast.makeText(getActivity(),""+t.getMessage(),Toast.LENGTH_LONG).show();
-                        addUser_pg_signIn.setVisibility(View.GONE);
-                        addUser_bt_signIn.setVisibility(View.VISIBLE);
-                    }
-                });
-            }
-        });
+//        addUser_bt_signIn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                addUser_pg_signIn.setVisibility(View.VISIBLE);
+//                addUser_bt_signIn.setVisibility(View.GONE);
+//                Call<LogInReturn>logInReturnCall=LogInActivity.retrofitInterface.addUser(new AddUserRequest());
+//                logInReturnCall.enqueue(new Callback<LogInReturn>() {
+//                    @Override
+//                    public void onResponse(Call<LogInReturn> call, Response<LogInReturn> response) {
+//                        if(response.body()==null)
+//                        {
+//                            Toast.makeText(getActivity(),"Something Went Wrong",Toast.LENGTH_LONG).show();
+//                            addUser_pg_signIn.setVisibility(View.GONE);
+//                            addUser_bt_signIn.setVisibility(View.VISIBLE);
+//                        }
+//                        else{
+//
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onFailure(Call<LogInReturn> call, Throwable t) {
+//                        Toast.makeText(getActivity(),""+t.getMessage(),Toast.LENGTH_LONG).show();
+//                        addUser_pg_signIn.setVisibility(View.GONE);
+//                        addUser_bt_signIn.setVisibility(View.VISIBLE);
+//                    }
+//                });
+//            }
+//        });
 
         return v;
     }

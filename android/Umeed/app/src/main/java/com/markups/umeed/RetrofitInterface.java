@@ -16,7 +16,7 @@ import retrofit2.http.Part;
 
 public interface RetrofitInterface {
 
-    @POST("")
+    @POST("login_manage.php/")
     Call<LogInReturn> login(@Body LogInRequest logInRequest);
 
     @POST("")

@@ -31,8 +31,9 @@ public class LogInActivity extends AppCompatActivity {
         setContentView(R.layout.activity_log_in);
         login_ed_phone=findViewById(R.id.login_ed_phone);
         login_ed_password=findViewById(R.id.login_ed_password);
-        phone=login_ed_phone.getText().toString();
-        password=login_ed_password.getText().toString();
+        login_bt_login=findViewById(R.id.login_bt_login);
+        login_pg_login=findViewById(R.id.login_pg_login);
+
         spref = getApplicationContext().getSharedPreferences("user", MODE_PRIVATE);
         edit=spref.edit();
         login_bt_login.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +41,9 @@ public class LogInActivity extends AppCompatActivity {
             public void onClick(View view) {
                 login_bt_login.setVisibility(View.GONE);
                 login_pg_login.setVisibility(View.VISIBLE);
-                Retrofit retrofit = new Retrofit.Builder().baseUrl("").addConverterFactory(
+                phone=login_ed_phone.getText().toString();
+                password=login_ed_password.getText().toString();
+                Retrofit retrofit = new Retrofit.Builder().baseUrl("https://sleepy-coast-63651.herokuapp.com/").addConverterFactory(
                         GsonConverterFactory.create()).build();
                 retrofitInterface = retrofit.create(RetrofitInterface.class);
                 Call<LogInReturn> logInReturnCall=retrofitInterface.login(new LogInRequest(Integer.parseInt(phone),password));
@@ -54,13 +57,15 @@ public class LogInActivity extends AppCompatActivity {
                         }
                         else
                         {
-                            if(response.body().getIs_Manager()=="T"){
+                            if(response.body().getIs_manager()=="t"){
                             edit.putString("type", "manager");
                         }
                         else{
                             edit.putString("type", "employee");
                         }
-                            edit.putString("id",response.body().getWorker_ID());
+                            edit.putString("id",response.body().getWorker_id());
+                            edit.putString("contact",phone);
+                            edit.putString("name",response.body().getName());
                             edit.commit();
 
                         startActivity(new Intent(LogInActivity.this,BottomNavManagerActivity.class));
