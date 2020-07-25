@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 require_once 'Database.php';
 require_once 'Worker.php';
 
-$instance = ConnectDb::getInstance();
+$instance = Database::getInstance();
 $db = $instance->getConnection();
 
 $worker=new Worker($db);
