@@ -10,5 +10,8 @@
     <string name="location">Enter Location</string>
     <string name="managerId">Enter Manager ID</string>
     <string name="confirm_password">Confirm Password</string>
-    <string name="signUp">Sign Up</string>
+    <string name="taskId">Enter Task ID</string>
+    <string name="product">Enter Product</string>
+    <string name="quantity">Enter Quantity</string>
+    <string name="assign">Assign</string>
 </resources>
