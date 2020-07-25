@@ -19,8 +19,14 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-//            startActivity(new Intent(MainActivity.this, BottomNavigationMain.class));
-//            finish();
+            if(spref.getString("type","default").equals("manager")){
+                startActivity(new Intent(MainActivity.this, BottomNavManagerActivity.class));
+                finish();
+            }
+            else{
+
+            }
+
         }
     }
 }
