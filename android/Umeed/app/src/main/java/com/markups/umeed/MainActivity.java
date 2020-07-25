@@ -19,8 +19,8 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
-            startActivity(new Intent(MainActivity.this, BottomNavigationMain.class));
-            finish();
+//            startActivity(new Intent(MainActivity.this, BottomNavigationMain.class));
+//            finish();
         }
     }
 }
