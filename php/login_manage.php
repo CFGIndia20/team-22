@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // database connection will be here
 // include database and object files
 
-require_once "config.php" ;
+require_once "Database.php" ;
 require_once "Login.php";
 
 $data = json_decode(file_get_contents("php://input"));

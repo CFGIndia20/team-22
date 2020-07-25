@@ -14,9 +14,7 @@ function initialize() {
 
 //function to load the corresponding page when the user logins
 function redirect() {
-  window.location.replace(
-    "C:/Users/Shruti Agrawal/team-22/react/taskPage.html"
-  );
+  window.location.replace("taskPage.html");
 }
 
 //function to stay on the same page when the user clicks the cancel button

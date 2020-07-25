@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Tasks</title>
+    <title>Events</title>
     <link
       rel="stylesheet"
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     />
     <link rel="stylesheet" type="text/css" href="css/taskPage.css" />
+    
   </head>
   <body>
     <nav class="navbar-right navbar transparent  navbar-expand-lg  navbar-dark  fixed-top">
@@ -27,11 +28,11 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto  ">
         
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Tasks</a>
+          <li class="nav-item ">
+            <a class="nav-link" href="taskPage.html">Tasks</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="eventPage.html">Events</a>
+            <a class="nav-link active" href="eventPage.html">Events</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="loginPage.html">Sign Out</a>
@@ -40,44 +41,51 @@
     </nav>
     
       <div class="container">
-        <h3>Create Task</h3>
+        <h3>Create Event</h3>
         <form>
           <!-- action="action_page.html" -->
-          <label>Product Name</label><br />
+          <label>Meeting ID</label><br />
           <input
             type="text"
             id="Pname"
             name="firstname"
-            placeholder="Product name.."
+            placeholder="Meeting ID"
             required
           />
           <br />
-          <label>Product ID</label><br />
+          <label>Type of Meeting</label><br />
           <input
             type="text"
             id="P_ID"
             name="lastname"
-            placeholder="Product ID.."
+            placeholder="type"
             required
           />
           <br />
-          <label>Quantity</label><br />
+          <label>Manager ID</label><br />
           <input
             type="number"
             min="0"
-            id="Quantity"
-            placeholder="Quantity"
+            id="mid"
+            placeholder="Manager ID"
             required
           />
           <br />
-          <label>Start Date</label><br />
+          <label>Center ID</label><br />
+          <input
+            type="number"
+            min="0"
+            id="mid"
+            placeholder="Center ID"
+            required
+          />
+          <br />
+          <label> Date</label><br />
           <label
             ><input type="Date" name="submit" id="startdate" min=""
           /></label>
           <br />
-          <label>End Date</label><br />
-          <label><input type="Date" name="submit" id="enddate" min="" /></label>
-          <br />
+
           <button type="submit" id="submitbtn">Create</button>
         </form>
       </div>

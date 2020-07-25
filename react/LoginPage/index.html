@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMEED</title>
+    <script src="js/pace.min.js"></script>
+    <script>
+      Pace.once("done", () => {
+        document.getElementById("fullpage").style.visibility = "visible";
+      });
+    </script>
+    <link rel="stylesheet" href="css/pace-theme-corner-indicator.css" />
+    <link rel="icon" type="image/png" href="./images/icon.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Product+Sans' rel='stylesheet' type='text/css"
+    />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/jquery.fullPage.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="loading" class="la-anim-10"></div>
+    <a
+      href="#"
+      data-activates="mobile-demo"
+      class="button-collapse hide-on-large-only"
+      style="position: fixed; z-index: 990; padding: 20px;"
+      ><i class="material-icons" style="font-size: 2.5rem; color: white;"
+        >menu</i
+      ></a
+    >
+
+    <ul class="side-nav" id="mobile-demo">
+      <li><a href="#aboutUSAnchor">ABOUT US</a></li>
+      <li><a href="#aboutUmeedAnchor">UMEED</a></li>
+      <li><a href="#galleryAnchor">GALLERY</a></li>
+      <li><a href="loginPage.html">ADMIN</a></li>
+    </ul>
+
+    <div id="fullpage" style="visibility: hidden;">
+      <nav style="background-color: transparent; z-index: 50;">
+        <div class="nav-wrapper">
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#aboutUSAnchor">ABOUT US</a></li>
+            <li><a href="#aboutUmeedAnchor">UMEED</a></li>
+            <li><a href="#galleryAnchor">GALLERY</a></li>
+            <li><a href="loginPage.html">ADMIN</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div id="home" class="section">
+        <div class="row" style="margin-bottom: 0px;">
+          <div
+            class="col s8 push-s2 m3 push-m2"
+            style="position: absolute; z-index: 30; top: 30vh;"
+          >
+            <img
+              src="images\logooo.png"
+              class="img logo responsive-img"
+              style="display: block; margin: auto;"
+            />
+          </div>
+        </div>
+        <div id="homeOverlay">
+          <div class="triangle hide-on-small-only">
+            <div class="bottomTriangle"></div>
+            <div class="heading bottomContent">
+              <h2>#UMEED</h2>
+            </div>
+          </div>
+          <div class="row show-on-small hide-on-med-and-up">
+            <div class="col bot s12 mobileHeadingBottom">
+              <h1>KARIGARI</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="aboutUS" class="section">
+        <div class="topTriangle hide-on-small-only">
+          <div class="UpperTriangle"></div>
+          <div class="row">
+            <div
+              class="col m3 push-m1 l3 heading headCover"
+              style="margin-top: 5%;"
+            >
+              <h2>ABOUT</h2>
+              <h5>KARIGARI</h5>
+            </div>
+          </div>
+        </div>
+        <div class="row show-on-small hide-on-med-and-up">
+          <div class="col s12 mobileHeadingTop">
+            <h1>KARIGARI</h1>
+          </div>
+        </div>
+        <div class="row contentBox">
+          <div class="col s12 m6 push-m5 content">
+            <p>
+              The organisation devised a program named "Karigari" for all those
+              women who cannot go outside their local vicinities. Umeed meets
+              the women employees once a week and discuss the progress made on
+              production tasks assigned to them the previous week.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="aboutUmeed" class="section">
+        <div class="row show-on-small hide-on-med-and-up">
+          <div
+            class="col s12 mobileHeadingTop"
+            style="background-color: rgb(69, 150, 251);"
+          >
+            <h1>UMEED</h1>
+          </div>
+        </div>
+        <div class="row contentBox">
+          <div class="col s12 m6 push-m1 content">
+            <p>
+              Umeed is a non-profit that hopes to promote women’s empowerment
+              and radically alter the mindsets that exist within society.
+              Through providing training and knowledge to women, we aspire to
+              bring about an immediate and lasting difference; one of hope,
+              dignity and security. We provide training to women to create and
+              sell simple and beautiful eco-friendly newspaper handicrafts, thus
+              giving these women exposure to new life-skills; such as planning,
+              budgeting, teamwork and creativity.
+            </p>
+          </div>
+        </div>
+        <div class="triangleBottom hide-on-small-only">
+          <div class="Umeedtriangle"></div>
+          <div class="row">
+            <div class="heading bottomContent">
+              <h2>ABOUT</h2>
+              <h4>UMEED</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="gallery" class="section">
+        <div class="topTriangle hide-on-small-only">
+          <div
+            class="UpperTriangle"
+            style="border-top-color: rgb(0, 196, 164);"
+          ></div>
+          <div class="row">
+            <div
+              class="col m3 push-m1 l3 heading headCover"
+              style="margin-top: 5%;"
+            >
+              <h2>GALLERY</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row show-on-small hide-on-med-and-up">
+          <div class="col s12 mobileHeadingTop">
+            <h1>GALLERY</h1>
+          </div>
+        </div>
+        <div class="row contentBox"></div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/jquery.fullpage.extensions.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
