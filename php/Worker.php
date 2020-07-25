@@ -45,6 +45,35 @@ public function add_user() {
     return false;
 }
 
+public function worker_assigned_to_manager() {
+    $query='SELECT 
+    name,
+    worker_id 
+    FROM 
+    ' . $this->table . ' 
+    WHERE 
+    manager_id = ?';
+    $stmt=$this->conn->prepare($query);
+    $stmt->bindParam(1, $this->manager_id);
+    $stmt->execute();
+    $num=$stmt->rowCount();
+
+if($num>0) {
+    while($row = $stmt->fetch(PDO::FETCH_ASSOC))
+        {
+            // $this->name[]=$row['name'];
+            // $this->worker_id[]=$row['worker_id'];
+            $this->data[] = $row;
+        }
+    }
+    /*
+    $row=$stmt->fetch(PDO::FETCH_ASSOC);
+    $this->name=$row['name'];
+*/
+}
+
+
+
 
 }
 
