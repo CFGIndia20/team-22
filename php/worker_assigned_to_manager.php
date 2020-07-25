@@ -11,30 +11,6 @@ $worker=new Worker($db);
 
 // $result= $worker->worker_assigned_to_manager();
 
-/*
-$num=$result->rowCount();
-
-if($num>0) {
-    $worker_arr=array();
-    $worker_arr['data']=array();
-
-
-    while($row=$result->fetch(PDO::FETCH_ASSOC)){
-        extract($row);
-        $worker_item=array(
-            'name' => $name
-        );
-        array_push($worker_arr['data'], $worker_item);
-    }
-    echo json_encode($worker_arr);
-}
-else {
-    echo json_encode(
-        array('message' => 'no worker found')
-    );
-} 
-
-*/
 
 $worker->manager_id = isset($_GET['manager_id']) ? $_GET['manager_id'] : die();
 $worker->worker_assigned_to_manager();
