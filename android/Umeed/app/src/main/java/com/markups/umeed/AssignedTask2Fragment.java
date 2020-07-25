@@ -23,9 +23,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import static android.content.Context.MODE_PRIVATE;
 
-public class AssignedTaskFragment extends Fragment {
+public class AssignedTask2Fragment extends Fragment {
 
-    public AssignedTaskFragment() {
+    public AssignedTask2Fragment() {
         // Required empty public constructor
     }
     SharedPreferences spref;
@@ -35,7 +35,7 @@ public class AssignedTaskFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View v= inflater.inflate(R.layout.fragment_assigned_task, container, false);
+        final View v= inflater.inflate(R.layout.fragment_assigned_task2, container, false);
         apology=v.findViewById(R.id.apology);
         spref = getActivity().getApplicationContext().getSharedPreferences("user", MODE_PRIVATE);
         final ProgressBar pbar=v.findViewById(R.id.progressbar);
@@ -50,7 +50,7 @@ public class AssignedTaskFragment extends Fragment {
                     RecyclerView recycler = v.findViewById(R.id.recycler);
                     recycler.setLayoutManager(new LinearLayoutManager(v.getContext()));
                     pbar.setVisibility(View.GONE);
-                    recycler.setAdapter(new AssignedAdapter(response.body()));
+                    recycler.setAdapter(new WAssignedAdapter(response.body()));
                 }
                 else{
                     pbar.setVisibility(View.GONE);

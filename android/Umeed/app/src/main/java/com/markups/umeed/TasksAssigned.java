@@ -1,12 +1,12 @@
 package com.markups.umeed;
 
 public class TasksAssigned {
-    String task_id,quantity,product_id,end_date;
+    String task_id,quantity, typeName,end_date;
 
-    public TasksAssigned(String task_id, String quantity, String product_id, String end_date) {
+    public TasksAssigned(String task_id, String quantity, String typeName, String end_date) {
         this.task_id = task_id;
         this.quantity = quantity;
-        this.product_id = product_id;
+        this.typeName = typeName;
         this.end_date = end_date;
     }
 
@@ -26,12 +26,12 @@ public class TasksAssigned {
         this.quantity = quantity;
     }
 
-    public String getProduct_id() {
-        return product_id;
+    public String getTypeName() {
+        return typeName;
     }
 
-    public void setProduct_id(String product_id) {
-        this.product_id = product_id;
+    public void setTypeName(String typeName) {
+        this.typeName = typeName;
     }
 
     public String getEnd_date() {

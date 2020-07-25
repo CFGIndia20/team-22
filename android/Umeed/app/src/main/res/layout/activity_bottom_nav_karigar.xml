@@ -19,6 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@drawable/bottom_nav_style"
-        app:menu="@menu/bottom_navigation_view" />
+        app:menu="@menu/bottom_navigation_view_karigar" />
 
 </RelativeLayout>

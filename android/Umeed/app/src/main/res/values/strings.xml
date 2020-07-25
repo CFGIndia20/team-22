@@ -14,4 +14,6 @@
     <string name="product">Enter Product</string>
     <string name="quantity">Enter Quantity</string>
     <string name="assign">Assign</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

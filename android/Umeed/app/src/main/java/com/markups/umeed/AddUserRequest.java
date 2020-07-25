@@ -1,14 +1,14 @@
 package com.markups.umeed;
 
 public class AddUserRequest {
-    String name,password,contact,location;
-    Integer manager_ID;
+    String name,password;
+    Integer contact,center_id,manager_id;
 
-    public AddUserRequest(String name, String password, String contact, String location, Integer manager_ID) {
+    public AddUserRequest(String name, String password, Integer contact, Integer center_id, Integer manager_id) {
         this.name = name;
         this.password = password;
         this.contact = contact;
-        this.location = location;
-        this.manager_ID = manager_ID;
+        this.center_id = center_id;
+        this.manager_id = manager_id;
     }
 }

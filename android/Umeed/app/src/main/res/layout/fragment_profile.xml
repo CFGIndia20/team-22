@@ -141,7 +141,7 @@
         android:textStyle="bold"
         android:id="@+id/profile_bt_logout"
         android:textSize="16sp"
-        android:textColor="@color/orange"
+        android:textColor="@color/umeed_dark"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>
