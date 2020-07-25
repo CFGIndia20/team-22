@@ -6,9 +6,8 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 require_once 'Database.php';
 require_once 'Worker.php';
 
-$database=new Database();
-$db=$database->connect();
-
+$instance = Database::getInstance();
+$db = $instance->getConnection();
 $worker=new Worker($db);
 
 $data=json_decode(file_get_contents("php://input"));
@@ -20,9 +19,7 @@ $worker->center_id=$data->center_id;
 $worker->manager_id=$data->manager_id;
 
 if($worker->add_user()) {
-    echo json_encode(
-        array('message' => 'user created')
-    );
+    echo json_encode($worker->name);
 }
 else {
     echo json_encode(

@@ -5,10 +5,10 @@ header('Content-Type: application/json');
 require_once 'Database.php';
 require_once 'product.php';
 
-$database=new Database();
-$db=$database->connect();
+$instance = Database::getInstance();
+$db = $instance->getConnection();
 
-$category=new Category($db);
+$category=new Product($db);
 $result=$category->show_Products();
 $num=$result->rowCount();
 

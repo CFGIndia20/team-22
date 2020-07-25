@@ -23,7 +23,7 @@ if(
     $contact = $data->contact ;
     $password = $data->password ;
     // INSTANTIATE DATABASE
-    $instance = ConnectDb::getInstance();
+    $instance = Database::getInstance();
     $db = $instance->getConnection();
     $user = new Login($db);
 

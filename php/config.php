@@ -1,16 +1,19 @@
 <?php
 
  // Singleton to connect db.
- class ConnectDb {
+ class Database {
     // Hold the class instance.
     private static $instance = null;
     private $conn;
 
-    private $host = 'us-cdbr-east-02.cleardb.com';
-    private $user = 'bee87445c7e2b3';
-    private $pass = '525d4a23';
-    private $name = 'heroku_9867e6b5b9d2385';
-
+//    private $host = 'us-cdbr-east-02.cleardb.com';
+//    private $user = 'bee87445c7e2b3';
+//    private $pass = '525d4a23';
+//    private $name = 'heroku_9867e6b5b9d2385';
+    private $host = 'localhost';
+    private $user = 'root';
+    private $pass = '';
+    private $name = 'umeed' ;
     // The db connection is established in the private constructor.
     private function __construct()
     {
@@ -23,7 +26,7 @@
     {
       if(!self::$instance)
       {
-        self::$instance = new ConnectDb();
+        self::$instance = new Database();
       }
 
       return self::$instance;
