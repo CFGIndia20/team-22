@@ -8,6 +8,8 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="green">#27AE60</color>
+    <color name= "umeed_light">#DBA9C3</color>
+    <color name= "umeed_dark">#A01F62</color>
     <color name="light_purple">#e3d9fc</color>
     <color name="purple">#7540EE</color>
     <color name="light_green">#50d050</color>

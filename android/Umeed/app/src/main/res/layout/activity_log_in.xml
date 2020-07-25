@@ -13,14 +13,27 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:text="Hello there !!"
+            android:text= "@string/login_text"
             android:textStyle="bold"
-            android:textSize="32dp"
-            android:textColor="#000000"/>
+            android:textSize="28dp"
+            android:textColor="@color/umeed_dark"
+            android:id="@+id/welcome"/>
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@drawable/ic_religion"
+                android:layout_toRightOf="@id/welcome"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/user"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -31,15 +44,15 @@
             android:layout_marginEnd="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/userDetail"
+                android:id="@+id/login_ed_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:hint="Email Id or Username"
+                android:hint="@string/phone_number"
                 android:imeOptions="actionNext"
-                android:inputType="text"
+                android:inputType="number"
                 android:maxLines="1"
                 android:textColor="#000000"
                 android:textColorHint="@color/dark_grey"
@@ -58,19 +71,19 @@
             android:layout_marginEnd="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/pwd"
-                android:textColor="#000000"
-                android:textColorHint="@color/dark_grey"
+                android:id="@+id/login_ed_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:hint="Password"
-
+                android:hint="@string/password"
                 android:imeOptions="actionNext"
                 android:inputType="textPassword"
+
                 android:maxLines="1"
+                android:textColor="#000000"
+                android:textColorHint="@color/dark_grey"
                 android:textIsSelectable="false"
                 android:textSize="20sp" />
         </android.support.design.widget.TextInputLayout>
@@ -83,16 +96,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/buttons_style"
-                android:text="Login"
+                android:text="@string/login_btn"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:id="@+id/login"
+                android:id="@+id/login_bt_login"
                 android:textSize="16sp"
                 android:layout_alignParentLeft="true"
-                android:textColor="@color/purple"/>
+                android:textColor="@color/umeed_dark"/>
             <ProgressBar
                 android:visibility="gone"
-                android:id="@+id/progress_login"
+                android:id="@+id/login_pg_login"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:indeterminateDrawable="@drawable/progress_one"
@@ -108,7 +121,7 @@
                 android:text="@string/forgot_password"
                 android:layout_margin="32dp"
                 android:gravity="right"
-                android:textColor="@color/purple"
+                android:textColor="@color/umeed_dark"
                 android:textSize="16sp"
                 android:layout_centerInParent="true"
                 android:textStyle="bold"/>
