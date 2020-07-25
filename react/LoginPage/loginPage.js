@@ -15,7 +15,7 @@ function initialize() {
 //function to load the corresponding page when the user logins
 function redirect() {
   window.location.replace(
-    "C:/Users/Shruti Agrawal/team-22/react/redirect.html"
+    "C:/Users/Shruti Agrawal/team-22/react/taskPage.html"
   );
 }
 
