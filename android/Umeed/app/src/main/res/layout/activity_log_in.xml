@@ -13,10 +13,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,13 +24,16 @@
             android:text= "@string/login_text"
             android:textStyle="bold"
             android:textSize="28dp"
-            android:textColor="@color/umeed_dark"/>
+            android:textColor="@color/umeed_dark"
+            android:id="@+id/welcome"/>
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:src="@drawable/ic_religion"
-                android:layout_centerInParent="true"/>
-        </LinearLayout>
+                android:layout_toRightOf="@id/welcome"
+                android:layout_centerVertical="true"
+                />
+        </RelativeLayout>
         <android.support.design.widget.TextInputLayout
             android:id="@+id/user"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -41,7 +44,7 @@
             android:layout_marginEnd="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/userDetail"
+                android:id="@+id/login_ed_phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -68,7 +71,7 @@
             android:layout_marginEnd="16dp">
 
             <android.support.design.widget.TextInputEditText
-                android:id="@+id/pwd"
+                android:id="@+id/login_ed_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -96,13 +99,13 @@
                 android:text="@string/login_btn"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:id="@+id/login"
+                android:id="@+id/login_bt_login"
                 android:textSize="16sp"
                 android:layout_alignParentLeft="true"
                 android:textColor="@color/umeed_dark"/>
             <ProgressBar
                 android:visibility="gone"
-                android:id="@+id/progress_login"
+                android:id="@+id/login_pg_login"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:indeterminateDrawable="@drawable/progress_one"

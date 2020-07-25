@@ -1,18 +1,18 @@
 package com.markups.umeed;
 
 public class LogInReturn {
-    String worker_ID,is_Manager;
+    String worker_id,is_manager;
 
-    public LogInReturn(String worker_ID, String is_Manager) {
-        this.worker_ID = worker_ID;
-        this.is_Manager = is_Manager;
+    public LogInReturn(String worker_id, String is_manager) {
+        this.worker_id = worker_id;
+        this.is_manager = is_manager;
     }
 
-    public String getWorker_ID() {
-        return worker_ID;
+    public String getWorker_id() {
+        return worker_id;
     }
 
-    public String getIs_Manager() {
-        return is_Manager;
+    public String getIs_manager() {
+        return is_manager;
     }
 }

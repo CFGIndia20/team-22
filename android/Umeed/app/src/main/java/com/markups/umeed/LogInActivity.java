@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import retrofit2.Call;
@@ -18,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class LogInActivity extends AppCompatActivity {
     TextInputEditText login_ed_phone, login_ed_password ;
-    Button login_bt_login;
+    TextView login_bt_login;
     ProgressBar login_pg_login;
     String phone,password;
     SharedPreferences spref;
