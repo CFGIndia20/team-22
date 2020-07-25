@@ -4,6 +4,11 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="login_text">Welcome to UMEED</string>
     <string name="login_btn">Login</string>
-    <string name="phone_number">Enter phone number</string>
-    <string name="password">Enter password</string>
+    <string name="phone_number">Enter Phone number</string>
+    <string name="password">Enter Password</string>
+    <string name="name">Enter Name</string>
+    <string name="location">Enter Location</string>
+    <string name="managerId">Enter Manager ID</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="signUp">Sign Up</string>
 </resources>
