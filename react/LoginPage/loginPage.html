@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="loginPage.css" />
     <title>Login Page</title>
   </head>
   <body>
     <!-- the login page for the admin -->
     <form action="action_page.php" method="post">
-      <div class="container">
+      <div class="loginbox">
+        <!-- path for avtar image -->
+        <img src="images/avatar.png" class="avatar" />
         <!-- primary field #1 username -->
         <label for="uname"><b>Username</b></label
         ><br />
@@ -31,16 +34,13 @@
         />
         <br />
         <!-- the submit button of the form -->
-        <button type="button" id="submitbtn">
-          Login</button
-        ><br />
-      </div>
-
-      <!-- the cancel button of the form -->
-      <div class="container">
+        <button type="button" id="submitbtn">Login</button>
+        <br /><br />
+        <!-- the cancel button of the form -->
         <button type="button" id="cancelbtn">Cancel</button>
       </div>
     </form>
   </body>
+  <!-- javascript reference -->
   <script type="text/javascript" src="loginPage.js"></script>
 </html>
