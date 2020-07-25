@@ -1,5 +1,5 @@
 <?php
-class Worker {
+class Worker1 {
 
 private $conn;
 private $table='worker';
@@ -14,14 +14,14 @@ public function __construct($db) {
     $this->conn=$db;
 }
 
-public function add_user() {
+public function add_user1() {
     $query='INSERT INTO ' . $this->table . '
     SET
         name= :name,
         password= :password,
         contact= :contact,
         center_id= :center_id,
-        manager_id= :manager_id';
+        manager_id=: manager_id';
 
     $stmt=$this->conn->prepare($query);
     $this->name=htmlspecialchars(strip_tags($this->name));
@@ -29,13 +29,13 @@ public function add_user() {
     $this->contact=htmlspecialchars(strip_tags($this->contact));
     $this->center_id=htmlspecialchars(strip_tags($this->center_id));
     $this->manager_id=htmlspecialchars(strip_tags($this->manager_id));
-
-    $stmt->bindParam(':name', $this->name);
+    
+    $stmt->bindParam(':name', $this->quantity);
     $stmt->bindParam(':password', $this->password);
     $stmt->bindParam(':contact', $this->contact);
     $stmt->bindParam(':center_id', $this->center_id);
     $stmt->bindParam(':manager_id', $this->manager_id);
-    
+        
 
     if($stmt->execute()) {
         return true;
@@ -44,39 +44,5 @@ public function add_user() {
     //printf("error: %s.\n", $stmt->error);
     return false;
 }
-
-public function worker_assigned_to_manager() {
-    $query='SELECT 
-    name,
-    worker_id 
-    FROM 
-    ' . $this->table . ' 
-    WHERE 
-    manager_id = ?';
-    $stmt=$this->conn->prepare($query);
-    $stmt->bindParam(1, $this->manager_id);
-    $stmt->execute();
-    $num=$stmt->rowCount();
-
-if($num>0) {
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC))
-        {
-            // $this->name[]=$row['name'];
-            // $this->worker_id[]=$row['worker_id'];
-            $this->data[] = $row;
-        }
-    }
-    /*
-    $row=$stmt->fetch(PDO::FETCH_ASSOC);
-    $this->name=$row['name'];
-*/
 }
-
-
-
-
-}
-
-
-
 ?>

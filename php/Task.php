@@ -37,6 +37,32 @@ public function create_task() {
     return false;
 }
 
+public function task_list() {
+   
+        $query='SELECT 
+        task_id, 
+        quantity,
+        product_id,
+        end_date 
+        FROM 
+        ' . $this->table;
+    
+        $stmt=$this->conn->prepare($query);
+        $stmt->execute();
+        while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+           
+           $this->data[] = $row;
+        }
+        
+        return $this->data;
+       
+    
+    
+}
+
+
+
+
 
 }
 
