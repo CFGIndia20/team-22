@@ -15,13 +15,13 @@ public function __construct($db) {
 }
 
 public function add_user() {
-    $query='INSERT INTO $this->table 
+    $query ='INSERT INTO '. $this->table . '
     SET
-        name= :name,
-        password= :password,
-        contact= :contact,
-        center_id= :center_id,
-        manager_id= :manager_id';
+       name = :name,
+       password = :password,
+       contact = :contact,
+       center_id = :center_id,
+       manager_id = :manager_id';
 
     $stmt=$this->conn->prepare($query);
     $this->name=htmlspecialchars(strip_tags($this->name));
@@ -35,7 +35,6 @@ public function add_user() {
     $stmt->bindParam(':contact', $this->contact);
     $stmt->bindParam(':center_id', $this->center_id);
     $stmt->bindParam(':manager_id', $this->manager_id);
-    
 
     if($stmt->execute()) {
         return true;
@@ -43,7 +42,9 @@ public function add_user() {
 
     //printf("error: %s.\n", $stmt->error);
     return false;
+
 }
+
 
 public function worker_assigned_to_manager() {
     $query='SELECT 
@@ -71,9 +72,6 @@ if($num>0) {
     $this->name=$row['name'];
 */
 }
-
-
-
 
 }
 

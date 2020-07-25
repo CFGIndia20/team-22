@@ -65,7 +65,9 @@ class ManagerTasks
         $stat->execute();
 
         if($stat->execute()) {
-            return $manager_id;
+            $data = [];
+            $data['worker_id'] = $manager_id;
+            return $data;
         }
 
         return false;
