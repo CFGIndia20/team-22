@@ -57,7 +57,7 @@ public class LogInActivity extends AppCompatActivity {
                         }
                         else
                         {
-                            if(response.body().getIs_manager()=="t"){
+                            if(response.body().getIs_manager()=="y"){
                             edit.putString("type", "manager");
                         }
                         else{
