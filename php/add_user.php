@@ -6,7 +6,7 @@ header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,
 include_once 'Database.php';
 include_once 'Worker.php';
 
-$instance = ConnectDb::getInstance();
+$instance = Database::getInstance();
 $db = $instance->getConnection();
 
 $worker=new Worker($db);
