@@ -26,7 +26,7 @@ TextView profile_tv_name,profile_tv_ID,profile_tv_contact,profile_bt_logout;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         spref = getActivity().getApplicationContext().getSharedPreferences("user", MODE_PRIVATE);
-
+        edit=spref.edit();
         final View v= inflater.inflate(R.layout.fragment_profile, container, false);
         profile_tv_name=v.findViewById(R.id.profile_tv_name);
         profile_tv_contact=v.findViewById(R.id.profile_tv_contact);

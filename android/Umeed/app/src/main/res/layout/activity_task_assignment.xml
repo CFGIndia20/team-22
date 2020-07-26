@@ -33,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/taskId"
                 android:imeOptions="actionNext"
-                android:inputType="textNoSuggestions"
+                android:inputType=""
                 android:maxLines="1"
                 android:textColor="#000000"
                 android:textColorHint="@color/dark_grey"
@@ -54,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/product"
                 android:imeOptions="actionNext"
-                android:inputType="textNoSuggestions"
+                android:inputType="none"
                 android:maxLines="1"
                 android:textColor="#000000"
                 android:textColorHint="@color/dark_grey"
@@ -76,7 +76,7 @@
                 android:layout_height="wrap_content"
                 android:hint="@string/quantity"
                 android:imeOptions="actionNext"
-                android:inputType="textNoSuggestions"
+                android:inputType="phone"
                 android:maxLines="1"
                 android:textColor="#000000"
                 android:textColorHint="@color/dark_grey"
@@ -100,7 +100,7 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:prompt="Worker" />
+                android:prompt="@string/forgot_password" />
 
         </android.support.design.widget.TextInputLayout>
         <RelativeLayout
@@ -121,7 +121,7 @@
                 android:textColor="@color/umeed_dark"/>
             <ProgressBar
                 android:visibility="gone"
-                android:id="@+id/addUser_pg_signIn"
+                android:id="@+id/taskAssignment_pg_signIn"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:indeterminateDrawable="@drawable/progress_two"

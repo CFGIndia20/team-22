@@ -20,9 +20,17 @@ public interface RetrofitInterface {
     @POST("login_manage.php/")
     Call<LogInReturn> login(@Body LogInRequest logInRequest);
 
-    @POST("")
+    @POST("add_user.php/")
     Call<LogInReturn> addUser(@Body AddUserRequest addUserRequest);
 
-    @GET("")
+    @POST("manager_assigns_to_worker.php/")
+    Call<Temp> assignWork(@Body WorkersAssigned workersAssigned);
+
+    @GET("manager_tasks.php/")
     Call<ArrayList<TasksAssigned>> taskAssigned(@Query("worker_id")String worker_id);
+
+    @GET("worker_assigned_to_manager.php/")
+    Call<ArrayList<Worker>> workerList(@Query("manager_id")String manager_id);
+
+
 }

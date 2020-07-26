@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
     SharedPreferences spref;
@@ -19,12 +20,14 @@ public class MainActivity extends AppCompatActivity {
         }
         else
         {
+            Log.v("plss",""+spref.getString("type","default"));
             if(spref.getString("type","default").equals("manager")){
                 startActivity(new Intent(MainActivity.this, BottomNavManagerActivity.class));
                 finish();
             }
             else{
-
+                startActivity(new Intent(MainActivity.this, BottomNavKarigarActivity.class));
+                finish();
             }
 
         }

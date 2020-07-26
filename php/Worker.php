@@ -1,19 +1,19 @@
 <?php
 class Worker {
 
-private $conn;
-private $table='worker';
-private $feedback_table = 'feedback' ;
-private $worker_table = 'task_worker' ;
-public $name;
-public $password;
-public $contact;
-public $center_id;
-public $manager_id;
+    private $conn;
+    private $table='worker';
+    private $feedback_table = 'feedback' ;
+    private $worker_table = 'task_worker' ;
+    public $name;
+    public $password;
+    public $contact;
+    public $center_id;
+    public $manager_id;
 
-public function __construct($db) {
-    $this->conn=$db;
-}
+    public function __construct($db) {
+        $this->conn=$db;
+    }
 
     public function add_user() {
         $query ='INSERT INTO '. $this->table . '
@@ -39,7 +39,8 @@ public function __construct($db) {
 
         if($stmt->execute()) {
             return true;
-        }
+            }
+
 
         //printf("error: %s.\n", $stmt->error);
         return false;

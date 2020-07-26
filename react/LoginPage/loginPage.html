@@ -1,67 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/loginPage.css" />
     <title>Login Page</title>
-  </head>
-  <body>
-    <nav
-      class="navbar-right navbar transparent navbar-expand-lg navbar-dark fixed-top"
-    >
-      <a class="navbar-brand" href="index.html">Umeed</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+</head>
+
+<body>
+    <nav class="navbar-right navbar transparent navbar-expand-lg navbar-dark fixed-top">
+        <a class="navbar-brand" href="index.html">Umeed</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </nav>
     <!-- the login page for the admin -->
-    <form action="action_page.php" method="post">
-      <div class="loginbox">
-        <!-- path for avtar image -->
-        <img src="images/avtar.png" class="avatar" />
-        <!-- primary field #1 username -->
-        <label for="uname"><b>Username</b></label
-        ><br />
-        <input
-          type="text"
-          placeholder="Enter Username"
-          name="uname"
-          id="uname"
-          required
-        /><br />
-        <!-- primary field #2 password -->
-        <label for="psw"><b>Password</b></label
-        ><br />
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="psw"
-          id="psw"
-          required
-        />
-        <br />
-        <!-- the submit button of the form -->
-        <button type="button" id="submitbtn">Login</button>
-        <br /><br />
-        <!-- the cancel button of the form -->
-        <button type="button" id="cancelbtn">Cancel</button>
-      </div>
+    <form action="action_page.php" method="post" id="formElem">
+        <div class="loginbox">
+            <!-- path for avtar image -->
+            <img src="images/avtar.png" class="avatar" />
+            <!-- primary field #1 username -->
+            <label for="uname"><b>Username</b></label><br />
+            <input type="text" id="uname" name="uname" placeholder="Enter Username" required /><br />
+            <!-- primary field #2 password -->
+            <label for="psw"><b>Password</b></label><br />
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required />
+            <br />
+            <!-- the submit button of the form -->
+            <button type="button" id="submitbtn">Login</button>
+            <br /><br />
+            <!-- the cancel button of the form -->
+            <button type="button" id="cancelbtn">Cancel</button>
+        </div>
     </form>
-  </body>
-  <!-- javascript reference -->
-  <script type="text/javascript" src="js/loginPage.js"></script>
+</body>
+<!-- javascript reference -->
+<script type="text/javascript" src="js/loginPage.js"></script>
+
 </html>

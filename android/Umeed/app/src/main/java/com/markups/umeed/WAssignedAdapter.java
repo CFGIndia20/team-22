@@ -11,9 +11,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class AssignedAdapter extends RecyclerView.Adapter<AssignedAdapter.viewholder> {
+public class WAssignedAdapter extends RecyclerView.Adapter<WAssignedAdapter.viewholder> {
     ArrayList<TasksAssigned>tasksAssigneds;
-    public AssignedAdapter(ArrayList<TasksAssigned> tasksAssigneds) {
+    public WAssignedAdapter(ArrayList<TasksAssigned> tasksAssigneds) {
         this.tasksAssigneds=tasksAssigneds;
 
     }
@@ -59,13 +59,13 @@ public class AssignedAdapter extends RecyclerView.Adapter<AssignedAdapter.viewho
 
         TextView taskid,product,quantity,deadline;
         CardView card;
-         public viewholder(@NonNull View itemView) {
+        public viewholder(@NonNull View itemView) {
             super(itemView);
-             taskid=(TextView)itemView.findViewById(R.id.id);
-             product=(TextView)itemView.findViewById(R.id.product);
-             quantity=(TextView)itemView.findViewById(R.id.quantity);
-             deadline=(TextView)itemView.findViewById(R.id.deadline);
-             card=(CardView)itemView.findViewById(R.id.card);
+            taskid=(TextView)itemView.findViewById(R.id.id);
+            product=(TextView)itemView.findViewById(R.id.product);
+            quantity=(TextView)itemView.findViewById(R.id.quantity);
+            deadline=(TextView)itemView.findViewById(R.id.deadline);
+            card=(CardView)itemView.findViewById(R.id.card);
         }
     }
 }

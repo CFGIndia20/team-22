@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -24,7 +25,7 @@ public class LogInActivity extends AppCompatActivity {
     String phone,password;
     SharedPreferences spref;
     SharedPreferences.Editor edit;
-    static  RetrofitInterface retrofitInterface;
+    RetrofitInterface retrofitInterface;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,21 +57,23 @@ public class LogInActivity extends AppCompatActivity {
                             login_pg_login.setVisibility(View.GONE);
                         }
                         else
-                        {
-                            if(response.body().getIs_manager()=="y"){
-                            edit.putString("type", "manager");
-                        }
-                        else{
-                            edit.putString("type", "employee");
-                        }
+                        {LogInReturn logInReturn=response.body();
                             edit.putString("id",response.body().getWorker_id());
                             edit.putString("contact",phone);
                             edit.putString("name",response.body().getName());
-                            edit.commit();
-
-                        startActivity(new Intent(LogInActivity.this,BottomNavManagerActivity.class));
-                        finish();
-
+                            Log.v("test",response.body().getIs_manager());
+                            if(logInReturn.getIs_manager().equals("n")){
+                                edit.putString("type", "employee");
+                                edit.commit();
+                                startActivity(new Intent(LogInActivity.this,BottomNavKarigarActivity.class));
+                                finish();
+                        }
+                        else{
+                                edit.putString("type", "manager");
+                                edit.commit();
+                                startActivity(new Intent(LogInActivity.this,BottomNavManagerActivity.class));
+                                finish();
+                        }
                         }
                     }
 
@@ -81,8 +84,6 @@ public class LogInActivity extends AppCompatActivity {
                         login_pg_login.setVisibility(View.GONE);
                     }
                 });
-
-
             }
         });
     }

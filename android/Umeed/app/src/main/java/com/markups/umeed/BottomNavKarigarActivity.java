@@ -24,6 +24,9 @@ public class BottomNavKarigarActivity extends AppCompatActivity {
                     case R.id.profile:
                         tempFragment=new ProfileFragment();
                         break;
+                    case R.id.assignedTask:
+                        tempFragment=new AssignedTaskFragment();
+                        break;
                 }
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, tempFragment).commit();
                 return true;

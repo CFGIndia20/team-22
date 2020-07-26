@@ -34,6 +34,11 @@ nav {
   background-color: transparent;
   position: absolute;
 }
+.image {
+  width: 33%;
+  margin: 1.66%;
+  float: right
+}
 
 .heading {
   font-family: Product Sans, sans-serif;
