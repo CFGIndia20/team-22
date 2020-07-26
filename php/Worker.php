@@ -107,6 +107,39 @@ class Worker {
             return false ;
         }
     }
+
+    public function giveFeedback($worker_id,$flag,$manager_id)
+    {
+        if ($flag == "0")
+        {
+            $s= 0 ;
+            $query1 = "UPDATE $this->worker_table SET worker_uploaded_L0 = :worker_uploaded_L0 WHERE worker_id = :worker_id" ;
+            $stmt=$this->conn->prepare($query1);
+            $stmt->bindParam(":worker_uploaded_L0", $s);
+            $stmt->bindParam(":worker_id", $worker_id);
+            if($stmt->execute())
+            {
+                $data = [];
+                $data['manager_id'] = $manager_id ;
+                return $data;
+            }
+            return false;
+        }
+        else
+        {
+            $query2 = "UPDATE $this->worker_table SET approved_L1 = worker_uploaded_L0 WHERE worker_id = :worker_id" ;
+            $stmt=$this->conn->prepare($query2);
+            $stmt->bindParam(":worker_id", $worker_id);
+            if($stmt->execute())
+            {
+                $data = [];
+                $data['manager_id'] = $manager_id ;
+                return $data;
+            }
+            return false;
+        }
+
+    }
 }
 
 
