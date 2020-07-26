@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.fragments;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +12,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.markups.umeed.R;
+import com.markups.umeed.RetrofitInterface;
 import com.markups.umeed.adapters.ApprovalAdapter;
 import com.markups.umeed.adapters.WAssignedAdapter;
 import com.markups.umeed.models.Approvals;

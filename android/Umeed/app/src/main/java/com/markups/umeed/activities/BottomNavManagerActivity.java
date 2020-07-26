@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.markups.umeed.R;
-import com.markups.umeed.RateFragment;
+import com.markups.umeed.fragments.RateFragment;
 import com.markups.umeed.fragments.AddUserFragment;
 import com.markups.umeed.fragments.AssignedTaskFragment;
 import com.markups.umeed.fragments.ProfileFragment;

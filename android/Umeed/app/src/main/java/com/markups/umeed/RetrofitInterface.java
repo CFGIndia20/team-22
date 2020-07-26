@@ -5,6 +5,7 @@ import com.markups.umeed.models.AddUserRequest;
 import com.markups.umeed.models.Approvals;
 import com.markups.umeed.models.LogInRequest;
 import com.markups.umeed.models.LogInReturn;
+import com.markups.umeed.models.Result;
 import com.markups.umeed.models.TaskCompletion;
 import com.markups.umeed.models.TasksAssigned;
 import com.markups.umeed.models.Temp;
@@ -23,6 +24,9 @@ public interface RetrofitInterface {
 
     @POST("login_manage.php/")
     Call<LogInReturn> login(@Body LogInRequest logInRequest);
+
+    @POST("manager_review.php/")
+    Call<LogInReturn> result(@Body Result result);
 
     @POST("add_user.php/")
     Call<LogInReturn> addUser(@Body AddUserRequest addUserRequest);
@@ -43,9 +47,7 @@ public interface RetrofitInterface {
     Call<ArrayList<Worker>> workerList(@Query("manager_id")String manager_id);
 
     @GET("get_feedback_details_of_worker.php/")
-    Call<ArrayList<Approvals>>approvalList(@Query("manager_id")String manager_id);
-
-
+    Call<ArrayList<Approvals>>approvalList(@Query("worker_id")String manager_id);
 
 
 }
