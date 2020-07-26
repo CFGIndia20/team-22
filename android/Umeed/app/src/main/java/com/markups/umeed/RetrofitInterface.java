@@ -2,6 +2,7 @@ package com.markups.umeed;
 
 
 import com.markups.umeed.models.AddUserRequest;
+import com.markups.umeed.models.Approvals;
 import com.markups.umeed.models.LogInRequest;
 import com.markups.umeed.models.LogInReturn;
 import com.markups.umeed.models.TaskCompletion;
@@ -40,6 +41,9 @@ public interface RetrofitInterface {
 
     @GET("worker_assigned_to_manager.php/")
     Call<ArrayList<Worker>> workerList(@Query("manager_id")String manager_id);
+
+    @GET("get_feedback_details_of_worker.php/")
+    Call<ArrayList<Approvals>>approvalList(@Query("manager_id")String manager_id);
 
 
 

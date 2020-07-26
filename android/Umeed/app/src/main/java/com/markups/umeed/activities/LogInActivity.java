@@ -55,9 +55,11 @@ public class LogInActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<LogInReturn> call, Response<LogInReturn> response) {
                         if(response.body()==null){
-                            Toast.makeText(LogInActivity.this,"Incorrect Credential",Toast.LENGTH_LONG);
+                            Toast.makeText(LogInActivity.this,"Incorrect Credentials",Toast.LENGTH_LONG).show();
                             login_bt_login.setVisibility(View.VISIBLE);
                             login_pg_login.setVisibility(View.GONE);
+                            login_ed_phone.setText("");
+                            login_ed_password.setText("");
                         }
                         else
                         {LogInReturn logInReturn=response.body();
