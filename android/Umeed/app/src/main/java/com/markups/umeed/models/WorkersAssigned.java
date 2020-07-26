@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.models;
 
 public class WorkersAssigned {
     String task_id,typeName,quantity,worker_id,manager_id;

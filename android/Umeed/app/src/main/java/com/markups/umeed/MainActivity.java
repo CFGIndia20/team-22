@@ -6,6 +6,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.markups.umeed.activities.BottomNavKarigarActivity;
+import com.markups.umeed.activities.BottomNavManagerActivity;
+import com.markups.umeed.activities.LogInActivity;
+
 public class MainActivity extends AppCompatActivity {
     SharedPreferences spref;
     @Override

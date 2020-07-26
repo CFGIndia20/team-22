@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.activities;
 
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -12,9 +12,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
+import com.markups.umeed.R;
+import com.markups.umeed.RetrofitInterface;
+import com.markups.umeed.models.Temp;
+import com.markups.umeed.models.Worker;
+import com.markups.umeed.models.WorkersAssigned;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import retrofit2.Call;

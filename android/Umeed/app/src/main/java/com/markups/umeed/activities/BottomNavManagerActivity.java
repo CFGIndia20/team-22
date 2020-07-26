@@ -1,12 +1,16 @@
-package com.markups.umeed;
+package com.markups.umeed.activities;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.markups.umeed.R;
+import com.markups.umeed.fragments.AddUserFragment;
+import com.markups.umeed.fragments.AssignedTaskFragment;
+import com.markups.umeed.fragments.ProfileFragment;
 
 public class BottomNavManagerActivity extends AppCompatActivity {
 

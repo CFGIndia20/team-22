@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.models;
 
 public class AddUserRequest {
     String name,password;

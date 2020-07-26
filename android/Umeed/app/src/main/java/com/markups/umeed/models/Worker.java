@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.models;
 
 public class Worker {
     String name,worker_id;

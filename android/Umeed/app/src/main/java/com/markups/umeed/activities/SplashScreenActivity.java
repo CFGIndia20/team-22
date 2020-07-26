@@ -1,9 +1,12 @@
-package com.markups.umeed;
+package com.markups.umeed.activities;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.markups.umeed.MainActivity;
+import com.markups.umeed.R;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
@@ -15,7 +18,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent=new Intent(SplashScreenActivity.this,MainActivity.class);
+                Intent intent=new Intent(SplashScreenActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

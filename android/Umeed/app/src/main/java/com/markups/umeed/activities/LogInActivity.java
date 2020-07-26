@@ -1,16 +1,19 @@
-package com.markups.umeed;
+package com.markups.umeed.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.markups.umeed.R;
+import com.markups.umeed.RetrofitInterface;
+import com.markups.umeed.models.LogInRequest;
+import com.markups.umeed.models.LogInReturn;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -61,7 +64,6 @@ public class LogInActivity extends AppCompatActivity {
                             edit.putString("id",response.body().getWorker_id());
                             edit.putString("contact",phone);
                             edit.putString("name",response.body().getName());
-                            Log.v("test",response.body().getIs_manager());
                             if(logInReturn.getIs_manager().equals("n")){
                                 edit.putString("type", "employee");
                                 edit.commit();
