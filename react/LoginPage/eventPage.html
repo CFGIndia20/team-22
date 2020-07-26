@@ -6,6 +6,21 @@
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/taskPage.css" />
+    <style>
+        table, td, th {  
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+        
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          padding: 15px;
+        }
+        </style>
 
 </head>
 
@@ -33,26 +48,65 @@
     </nav>
 
     <div class="container">
+        <h3>Event List</h3>
+        <table id="eventTable">
+            <tr>
+              <th>Meeting Name</th>
+              <th>Type of Meeting</th>
+              <th>Manager Name</th>
+              <th>Center Name</th>
+              <th>Date</th>
+            </tr>
+            <tr>
+              <td>Citizen Rights</td>
+              <td>Educational</td>
+              <td>Mr. John Doe</td>
+              <td>MUM</td>
+              <td>27-08-2020</td>
+            </tr>
+            <tr>
+              <td>Self Defence</td>
+              <td>Educational</td>
+              <td>Mrs. Eva Nortan</td>
+              <td>BLR</td>
+              <td>30-08-2020</td>
+            </tr>
+            <tr>
+              <td>Freedom of Speech</td>
+              <td>Motivational</td>
+              <td>Mr. Devin Brrok</td>
+              <td>HYD</td>
+              <td>27-08-2020</td>
+            </tr>
+          </table>
+          <br/>
         <h3>Create Event</h3>
         <form>
             <!-- action="action_page.html" -->
-            <label>Meeting ID</label><br />
-            <input type="text" id="Pname" name="firstname" placeholder="Meeting ID" required />
+            <label>Meeting Name</label><br />
+            <input type="text" id="Pname" name="firstname" placeholder="Meeting Name" required />
             <br />
             <label>Type of Meeting</label><br />
             <input type="text" id="P_ID" name="lastname" placeholder="type" required />
             <br />
-            <label>Manager ID</label><br />
-            <input type="number" min="0" id="mid" placeholder="Manager ID" required />
+            <label>Manager Name</label><br />
+            <input type="text" min="0" id="mid" placeholder="Manager Name" required />
             <br />
-            <label>Center ID</label><br />
-            <input type="number" min="0" id="mid" placeholder="Center ID" required />
+            <label for="Center">Center Name</label>
+            <br />
+            <select name="Center" id="Center">
+            <option value="MUM">MUM</option>
+            <option value="BLR">BLR</option>
+            <option value="HYD">HYD</option>
+            <option value="others">OTHERS</option>
+            </select>
             <br />
             <label> Date</label><br />
             <label><input type="Date" name="submit" id="startdate" min="" /></label>
             <br />
 
-            <button type="submit" id="submitbtn" onclick="alert('Thank you, event created!')">Create</button>
+            <button type="submit" id="submitbtn" onclick="alert('Thank you, event created!')"
+            onsubmit="rowCreate()">Create</button>
         </form>
     </div>
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>

@@ -6,6 +6,21 @@
     <link rel="stylesheet" type="text/css"
         href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/taskPage.css" />
+    <style>
+        table, td, th {  
+          border: 1px solid #ddd;
+          text-align: left;
+        }
+        
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          padding: 15px;
+        }
+        </style>
 </head>
 
 <body>
@@ -32,14 +47,39 @@
     </nav>
 
     <div class="container">
+        <h3>Task List</h3>
+        <table id="eventTable">
+            <tr>
+              <th>Product Name</th>
+              <th>Quantity</th>
+              <th>Start Date</th>
+              <th>End Date</th>
+            </tr>
+            <tr>
+              <td>Carpet</td>
+              <td>1000</td>
+              <td>26-07-2020</td>
+              <td>27-08-2020</td>
+            </tr>
+            <tr>
+                <td>Pots</td>
+                <td>2000</td>
+                <td>30-07-2020</td>
+                <td>15-08-2020</td>
+            </tr>
+            <tr>
+                <td>Toaster</td>
+                <td>2000</td>
+                <td>01-08-2020</td>
+                <td>27-08-2020</td>
+            </tr>
+          </table>
+          <br/>
         <h3>Create Task</h3>
         <form>
             <!-- action="action_page.html" -->
             <label>Product Name</label><br />
             <input type="text" id="Pname" name="firstname" placeholder="Product name.." required />
-            <br />
-            <label>Product ID</label><br />
-            <input type="text" id="P_ID" name="lastname" placeholder="Product ID.." required />
             <br />
             <label>Quantity</label><br />
             <input type="number" min="0" id="Quantity" placeholder="Quantity" required />
@@ -50,7 +90,8 @@
             <label>End Date</label><br />
             <label><input type="Date" name="submit" id="enddate" min="" /></label>
             <br />
-            <button type="submit" id="submitbtn" onclick="alert('Thank you, task created!')">Create</button>
+            <button type="submit" id="submitbtn" onclick="alert('Thank you, task created!')"
+            onsubmit="rowCreate()">Create</button>
         </form>
     </div>
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
