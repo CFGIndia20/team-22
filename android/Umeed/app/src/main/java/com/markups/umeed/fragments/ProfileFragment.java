@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.fragments;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -7,8 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
+
+import com.markups.umeed.activities.LogInActivity;
+import com.markups.umeed.R;
 
 import static android.content.Context.MODE_PRIVATE;
 
@@ -40,7 +42,7 @@ TextView profile_tv_name,profile_tv_ID,profile_tv_contact,profile_bt_logout;
             public void onClick(View view) {
                edit.clear();
                edit.commit();
-               startActivity(new Intent(v.getContext(),LogInActivity.class));
+               startActivity(new Intent(v.getContext(), LogInActivity.class));
                getActivity().finish();
             }
         });

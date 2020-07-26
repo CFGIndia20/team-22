@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.fragments;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,8 +12,12 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.markups.umeed.R;
+import com.markups.umeed.RetrofitInterface;
+import com.markups.umeed.adapters.WAssignedAdapter;
+import com.markups.umeed.models.TasksAssigned;
+
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,7 +46,7 @@ public class AssignedTask2Fragment extends Fragment {
         Retrofit retrofit = new Retrofit.Builder().baseUrl("https://sleepy-coast-63651.herokuapp.com/").addConverterFactory(
                 GsonConverterFactory.create()).build();
         final RetrofitInterface retrofitInterface = retrofit.create(RetrofitInterface.class);
-        Call<ArrayList<TasksAssigned>>arrayListCall= retrofitInterface.taskAssigned(spref.getString("id","default"));
+        Call<ArrayList<TasksAssigned>>arrayListCall= retrofitInterface.taskAssignedW(spref.getString("id","default"));
         arrayListCall.enqueue(new Callback<ArrayList<TasksAssigned>>() {
             @Override
             public void onResponse(Call<ArrayList<TasksAssigned>> call, Response<ArrayList<TasksAssigned>> response) {
@@ -55,7 +59,7 @@ public class AssignedTask2Fragment extends Fragment {
                 else{
                     pbar.setVisibility(View.GONE);
                     apology.setVisibility(View.VISIBLE);
-                    Toast.makeText(v.getContext(),"Something went wrong",Toast.LENGTH_LONG).show();
+                    Toast.makeText(v.getContext(),"No tasks assigned yet",Toast.LENGTH_LONG).show();
                 }
             }
 

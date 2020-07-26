@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,10 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.markups.umeed.R;
+import com.markups.umeed.RetrofitInterface;
+import com.markups.umeed.models.AddUserRequest;
+import com.markups.umeed.models.LogInReturn;
 
 import retrofit2.Call;
 import retrofit2.Callback;

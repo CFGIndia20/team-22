@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.markups.umeed">
-
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/splashh_logo"
@@ -9,11 +11,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TaskAssignmentActivity"></activity>
-        <activity android:name=".BottomNavKarigarActivity" />
-        <activity android:name=".BottomNavManagerActivity" />
-        <activity android:name=".LogInActivity" />
-        <activity android:name=".SplashScreenActivity">
+        <activity android:name=".activities.TaskCompletionActivity"></activity>
+        <activity android:name=".activities.TaskAssignmentActivity" />
+        <activity android:name=".activities.BottomNavKarigarActivity" />
+        <activity android:name=".activities.BottomNavManagerActivity" />
+        <activity android:name=".activities.LogInActivity" />
+        <activity android:name=".activities.SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +25,5 @@
         </activity>
         <activity android:name=".MainActivity" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
