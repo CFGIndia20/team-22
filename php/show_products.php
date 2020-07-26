@@ -16,7 +16,6 @@ if($num>0) {
     $product_arr=array();
     $product_arr['data']=array();
 
-
     while($row=$result->fetch(PDO::FETCH_ASSOC)){
         extract($row);
         $product_item=array(
@@ -24,6 +23,7 @@ if($num>0) {
             'typeName' => $typeName, 
             'description' => $description
         );
+
         array_push($product_arr['data'], $product_item);
     }
     echo json_encode($product_arr);

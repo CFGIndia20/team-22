@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.models;
 
 public class LogInReturn {
     String worker_id,is_manager,name;

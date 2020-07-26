@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.adapters;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,11 +9,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.markups.umeed.R;
+import com.markups.umeed.activities.TaskAssignmentActivity;
+import com.markups.umeed.models.TasksAssigned;
+
 import java.util.ArrayList;
 
-public class WAssignedAdapter extends RecyclerView.Adapter<WAssignedAdapter.viewholder> {
+public class AssignedAdapter extends RecyclerView.Adapter<AssignedAdapter.viewholder> {
     ArrayList<TasksAssigned>tasksAssigneds;
-    public WAssignedAdapter(ArrayList<TasksAssigned> tasksAssigneds) {
+    public AssignedAdapter(ArrayList<TasksAssigned> tasksAssigneds) {
         this.tasksAssigneds=tasksAssigneds;
 
     }
@@ -59,13 +63,13 @@ public class WAssignedAdapter extends RecyclerView.Adapter<WAssignedAdapter.view
 
         TextView taskid,product,quantity,deadline;
         CardView card;
-        public viewholder(@NonNull View itemView) {
+         public viewholder(@NonNull View itemView) {
             super(itemView);
-            taskid=(TextView)itemView.findViewById(R.id.id);
-            product=(TextView)itemView.findViewById(R.id.product);
-            quantity=(TextView)itemView.findViewById(R.id.quantity);
-            deadline=(TextView)itemView.findViewById(R.id.deadline);
-            card=(CardView)itemView.findViewById(R.id.card);
+             taskid=(TextView)itemView.findViewById(R.id.id);
+             product=(TextView)itemView.findViewById(R.id.product);
+             quantity=(TextView)itemView.findViewById(R.id.quantity);
+             deadline=(TextView)itemView.findViewById(R.id.deadline);
+             card=(CardView)itemView.findViewById(R.id.card);
         }
     }
 }

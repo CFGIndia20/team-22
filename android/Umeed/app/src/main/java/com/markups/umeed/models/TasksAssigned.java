@@ -1,4 +1,4 @@
-package com.markups.umeed;
+package com.markups.umeed.models;
 
 public class TasksAssigned {
     String task_id,quantity, typeName,end_date;

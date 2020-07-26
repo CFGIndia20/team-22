@@ -3,10 +3,12 @@ class Task {
 
 private $conn;
 private $table='tasks';
+private $product_Table = "product" ;
 
 public $quantity;
 public $product_id;
 public $end_date;
+public $typeName;
 
 
 public function __construct($db) {
@@ -36,6 +38,37 @@ public function create_task() {
     //printf("error: %s.\n", $stmt->error);
     return false;
 }
+
+public function task_list() {
+   
+        $query='SELECT 
+        task_id, 
+        quantity,
+        product_id,
+        end_date 
+        FROM 
+        ' . $this->table;
+    
+        $stmt=$this->conn->prepare($query);
+        $stmt->execute();
+        while($row=$stmt->fetch(PDO::FETCH_ASSOC)){
+            $query2 = "SELECT typeName FROM $this->product_Table where product_id = :product_id" ;
+            $stat = $this->conn->prepare($query2);
+            $stat->bindparam(":product_id" , $row["product_id"]);
+            $stat->execute();
+            $row['typeName'] = $stat->fetch(PDO::FETCH_ASSOC)['typeName'];
+           
+           $this->data[] = $row;
+        }
+        
+        return $this->data;
+       
+    
+    
+}
+
+
+
 
 
 }
