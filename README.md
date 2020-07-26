@@ -27,3 +27,6 @@ Email: agrawalshruti909@gmail.com
 Kaustubh Kekre (DJSCE)<br>
 Phone: 9699447379<br>
 Email: kkekre90@gmail.com
+
+
+For the front end web development, go to the folder react->LoginPage and run index.html file, it will load the landing page of the website. There are 3 folders namely css, js and images which contain cascading style sheets file used throughout the website, the js folder contains all the javacsripts file used throughout and the images folder has all the imges.
