@@ -28,3 +28,5 @@ The PHP REST APIs act as an independent backend layer. So, at a given point of t
 We have implemented the basic prototypes of the progress bar which are mainly pictorial which will help in solving the language barrier issues. The front end and backend of the website could be integrated and then webiste could be successfully used by the admin. Progress bar could be added as an add on feature in the admin section to see the progress of the each manager using pie chart. excel to sql implementation will be easier since the app has been developed.
 
 
+
+##### The code ("Code") in this repository was created solely by the student teams during a coding competition hosted by JPMorgan Chase Bank, N.A. ("JPMC").						JPMC did not create or contribute to the development of the Code.  This Code is provided AS IS and JPMC makes no warranty of any kind, express or implied, as to the Code,						including but not limited to, merchantability, satisfactory quality, non-infringement, title or fitness for a particular purpose or use.
